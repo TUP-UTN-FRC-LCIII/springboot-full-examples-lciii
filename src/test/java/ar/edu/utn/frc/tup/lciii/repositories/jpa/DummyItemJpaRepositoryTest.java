@@ -1,6 +1,7 @@
-package ar.edu.utn.frc.tup.lciii.entities;
+package ar.edu.utn.frc.tup.lciii.repositories.jpa;
 
-import ar.edu.utn.frc.tup.lciii.repositories.jpa.DummyItemJpaRepository;
+import ar.edu.utn.frc.tup.lciii.entities.DummyEntity;
+import ar.edu.utn.frc.tup.lciii.entities.DummyItemEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ repositorios de Spring Data JPA. Configura un entorno de prueba
 específico para las operaciones de persistencia de datos.
  */
 @DataJpaTest
-class DummyItemEntityTest {
+class DummyItemJpaRepositoryTest {
 
     @Autowired
     /*
