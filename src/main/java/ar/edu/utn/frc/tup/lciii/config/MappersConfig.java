@@ -15,12 +15,12 @@ public class MappersConfig {
         return new ModelMapper();
     }
 
-    @Bean
+    @Bean("mergerMapper")
     /*
     Esta anotación se utiliza para indicar inequivocamente cual es el nombre que
     tendrá un Bean. De esta manera podemos tener mas de Bean del mismo tipo en al ApplicationContext.
      */
-    @Qualifier("mergerMapper")
+    //@Qualifier("mergerMapper")
     public ModelMapper mergerMapper() {
         ModelMapper mapper =  new ModelMapper();
         mapper.getConfiguration()

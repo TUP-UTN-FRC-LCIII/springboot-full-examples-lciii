@@ -1,6 +1,8 @@
 package ar.edu.utn.frc.tup.lciii.config;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.swagger.v3.core.jackson.ModelResolver;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -68,4 +70,8 @@ public class SpringDocConfig {
                 .addServersItem(server);
     }
 
+    @Bean
+    public ModelResolver modelResolver(ObjectMapper objectMapper) {
+        return new ModelResolver(objectMapper);
+    }
 }
